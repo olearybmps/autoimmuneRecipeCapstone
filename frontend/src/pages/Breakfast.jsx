@@ -4,7 +4,7 @@ import RecipeList from '../components/RecipeList';
 const Breakfast = () => {
     return (
         <div>
-            <h1>Breakfast Recipes</h1>
+            <h2>Breakfast Recipes</h2>
             <RecipeList mealType="breakfast" />
         </div>
     );
