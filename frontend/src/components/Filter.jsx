@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import './Filter.css';
 
+// Array of filter options
 const filterOptions = [
     'alcohol-cocktail',
     'alcohol-free',
@@ -38,37 +40,58 @@ const filterOptions = [
     'wheat-free',
 ];
 
+// Filter component receives onFilterChange function as prop from Breakfast.jsx component
 const Filter = ({ onFilterChange }) => {
+    // Store selected filters
     const [selectedFilters, setSelectedFilters] = useState([]);
+    // Control visibility of filters
+    const [showFilters, setShowFilters] = useState(false);
 
+    // Handle filter toggle
     const handleFilterToggle = (filter) => {
         setSelectedFilters((prevFilters) => {
+            // Check if filter already selected
             const updatedFilters = prevFilters.includes(filter)
-                ? prevFilters.filter((f) => f !== filter)
-                : [...prevFilters, filter];
+                ? // Remove filter if selected
+                  prevFilters.filter((f) => f !== filter)
+                : // Add filter if not selected
+                  [...prevFilters, filter];
 
+            // Call onFilterChange function with new filters
             onFilterChange(updatedFilters);
+            // Update state
             return updatedFilters;
         });
     };
 
     return (
-        <div>
-            <h3>Diet & Allergy Filters</h3>
-            <ul>
-                {filterOptions.map((filter) => (
-                    <li key={filter}>
-                        <label>
-                            <input
-                                type="checkbox"
-                                checked={selectedFilters.includes(filter)}
-                                onChange={() => handleFilterToggle(filter)}
-                            />
-                            {filter}
-                        </label>
-                    </li>
-                ))}
-            </ul>
+        <div className="filter-container">
+            <div className="filter-header">
+                {/* Title for filter section */}
+                <h3>Diet & Allergy Filters</h3>
+                {/* Filter toggle button */}
+                <button onClick={() => setShowFilters(!showFilters)}>
+                    {showFilters ? 'Hide Filters' : 'Show Filters'}
+                </button>
+            </div>
+            {/* Conditionally render filter checkboxes based on showFilters state */}
+            {showFilters && (
+                <ul className="filter-list">
+                    {/* Map over filterOptions, render each filter */}
+                    {filterOptions.map((filter) => (
+                        <li key={filter}>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={selectedFilters.includes(filter)}
+                                    onChange={() => handleFilterToggle(filter)}
+                                />
+                                {filter}
+                            </label>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 };

@@ -6,11 +6,13 @@ import Header from './components/Header';
 const App = () => {
     return (
         <Router>
-            <div>
+            <div className="app-container">
                 <Header />
-                <Routes>
-                    <Route path="/" element={<Breakfast />} />
-                </Routes>
+                <main>
+                    <Routes>
+                        <Route path="/" element={<Breakfast />} />
+                    </Routes>
+                </main>
             </div>
         </Router>
     );
