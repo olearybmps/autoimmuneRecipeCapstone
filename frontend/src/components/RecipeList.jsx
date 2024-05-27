@@ -21,10 +21,12 @@ const RecipeList = ({ mealType, filters = [] }) => {
             try {
                 // Initiate status to true before making API request
                 setLoading(true);
+
                 // Construct query string for selected filters
                 const filtersQuery = filters.length
                     ? filters.map((filter) => `health=${filter}`).join('&')
                     : '';
+
                 // Construct API URL
                 const url = `${BASE_URL}?type=public&q=${encodeURIComponent(
                     mealType
@@ -49,7 +51,7 @@ const RecipeList = ({ mealType, filters = [] }) => {
 
         // Call fetchRecipes function
         fetchRecipes();
-    }, [mealType, filters]); // Dependencies: mealType and filters
+    }, [mealType, filters]); // Dependencies array: run if mealType and filters change
 
     // Render loading message if loading is true
     if (loading) {
@@ -74,9 +76,22 @@ const RecipeList = ({ mealType, filters = [] }) => {
                                 src={recipe.recipe.image}
                                 alt={recipe.recipe.label}
                             />
-                            <p>
-                                Calories: {Math.round(recipe.recipe.calories)}
-                            </p>
+                            <p>Source: {recipe.recipe.source}</p>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                {recipe.recipe.ingredientLines.map(
+                                    (ingredient, index) => (
+                                        <li key={index}>{ingredient}</li>
+                                    )
+                                )}
+                            </ul>
+                            <a
+                                href={recipe.recipe.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Recipe
+                            </a>
                         </li>
                     ))}
                 </ul>

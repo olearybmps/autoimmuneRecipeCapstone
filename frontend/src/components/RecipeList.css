@@ -1,29 +1,78 @@
+.recipe-list-container {
+    margin-top: 20px;
+}
+
 .recipe-list {
     display: grid;
+    /* Automatically adjust cols to fit available space
+    Each col at least 300px wide but able to grow; reponsive */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Set gap between grid items; rows and cols */
     grid-gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .recipe-item {
-    border: 1px solid #53C0CC;
-    padding: 20px;
-    border-radius: 4px;
     background-color: #fff;
+    border: 2px solid #53C0CC;
+    border-radius: 8px;
+    padding: 20px;
+    /* subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-item img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 4px;
 }
 
 .recipe-item h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #213502;
+    color: #1F4F58;
 }
 
 .recipe-item p {
     margin-bottom: 10px;
+    color: #213502;
+}
+
+.recipe-item h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
     color: #1F4F58;
+}
+
+.recipe-item ul {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.recipe-item li {
+    margin-bottom: 5px;
+    color: #213502;
+}
+
+.recipe-item a {
+    display: inline-block;
+    background-color: #7FA00E;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    /* Make background color change more gradually 
+    over 0.3 seconds when hovering over link */
+    transition: background-color 0.3s;
+}
+
+.recipe-item a:hover {
+    background-color: #5C7C0A;
+}
+
+.error-message {
+    color: #FF0000;
+    font-weight: bold;
 }
