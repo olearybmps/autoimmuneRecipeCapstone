@@ -15,6 +15,10 @@ function Header() {
                             {/* Link to the Breakfast page */}
                             <Link to="/">Breakfast</Link>
                         </li>
+                        <li>
+                            {/* Link to the Lunch page */}
+                            <Link to="/lunch">Lunch</Link>
+                        </li>
                         {/* more links */}
                     </ul>
                 </nav>

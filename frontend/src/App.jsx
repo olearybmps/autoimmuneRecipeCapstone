@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Breakfast from './pages/Breakfast';
+import Lunch from './pages/Lunch';
 import Header from './components/Header';
+
 
 const App = () => {
     return (
@@ -12,6 +14,7 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Breakfast />} />
                         <Route path="/breakfast" element={<Breakfast />} />
+                        <Route path="/lunch" element={<Lunch />} />
                     </Routes>
                 </main>
             </div>
