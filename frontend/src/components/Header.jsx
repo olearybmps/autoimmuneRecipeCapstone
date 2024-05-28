@@ -37,7 +37,7 @@ function Header() {
                         </li>
                         <li>
                             {/* Link to the Community page */}
-                            <Link to="/user-recipes">Community</Link>
+                            <Link to="/user-recipes">Community<br />Recipes</Link>
                         </li>
                         {/* more links */}
                     </ul>
