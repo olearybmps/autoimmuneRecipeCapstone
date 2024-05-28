@@ -4,6 +4,7 @@ import Breakfast from './pages/Breakfast';
 import Lunch from './pages/Lunch';
 import Dinner from './pages/Dinner';
 import Snack from './pages/Snack';
+import UserRecipes from './pages/UserRecipes';
 import Header from './components/Header';
 
 
@@ -21,6 +22,7 @@ const App = () => {
                         <Route path="/lunch" element={<Lunch />} />
                         <Route path="/dinner" element={<Dinner />} />
                         <Route path="/snack" element={<Snack />} />
+                        <Route path="/user-recipes" element={<UserRecipes />} />
                     </Routes>
                 </main>
             </div>

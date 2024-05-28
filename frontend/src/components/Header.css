@@ -1,19 +1,33 @@
+/* * {
+    border: 1px solid red;
+} */
+
 header {
     background-color: #1F4F58;
-    padding: 20px;
     color: #DCDA65;
 }
 
 .header-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header-image-container {
+    margin-right: 10px;
+    /* border: 1px solid red; */
+}
+
+.header-image {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 nav ul {

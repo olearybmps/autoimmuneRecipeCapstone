@@ -23,6 +23,9 @@ app.use(cors());
 // Parse incoming request bodies in JSON format
 app.use(express.json());
 
+// Connect to DB
+connectToDb();
+
 // Import recipe routes
 const recipeRoutes = require('./routes/recipeRoutes');
 app.use('/api/recipes', recipeRoutes);
@@ -30,8 +33,7 @@ app.use('/api/recipes', recipeRoutes);
 // Error handling middleware
 app.use(errorHandler);
 
-// Connect to DB
-connectToDb();
+
 
 // Start express server and listen on port
 app.listen(port, () => {
