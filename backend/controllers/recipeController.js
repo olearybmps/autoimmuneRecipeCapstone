@@ -2,12 +2,13 @@ const Recipe = require('../models/recipeModel');
 
 // Get all recipes
 const getAllRecipes = async (req, res) => {
-    try {
-        const recipes = await Recipe.find();
-        res.json(recipes);
-    } catch (error) {
-        res.status(500).json({ error: 'Server error'});
-    }
+  try {
+    const recipes = await Recipe.find();
+    console.log('Recipes:', recipes);
+    res.json(recipes);
+  } catch (error) {
+    res.status(500).json({ error: 'Server error' });
+  }
 };
 
 // Get a recipe by ID

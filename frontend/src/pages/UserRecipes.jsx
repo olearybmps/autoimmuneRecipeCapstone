@@ -9,8 +9,10 @@ const UserRecipes = () => {
 
     const fetchRecipes = async () => {
         try {
-            const response = await fetch('/api/recipes');
+            const response = await fetch('http://localhost:3000/api/recipes');
+            console.log('Response:', response);
             const data = await response.json();
+            console.log('Data:', data);
             setRecipes(data);
         } catch (error) {
             console.error('Error fetching recipes:', error);
@@ -20,13 +22,10 @@ const UserRecipes = () => {
     return (
         <div>
             <h2>User Recipes</h2>
-            <div className="recipe-list">
+            <div>
                 {recipes.map((recipe) => (
-                    <div key={recipe._id} className="recipe-item">
+                    <div key={recipe._id}>
                         <h3>{recipe.title}</h3>
-                        <p>{recipe.description}</p>
-                        <p>{recipe.source}</p>
-                        <img src={recipe.imageURL} alt={recipe.title} />
                     </div>
                 ))}
             </div>
