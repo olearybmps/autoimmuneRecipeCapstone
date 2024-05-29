@@ -42,7 +42,6 @@ function Header() {
                                     Community Recipes
                                 </Link>
                             </li>
-                            {/* more links */}
                         </ul>
                     </nav>
                 </div>
