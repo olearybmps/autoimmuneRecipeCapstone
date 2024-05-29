@@ -1,13 +1,15 @@
+// Import necessary dependencies from React and local components
 import React, { useState } from 'react';
 import RecipeList from '../components/RecipeList';
 import Filter from '../components/Filter';
 
+// Define reakfast component
 const Breakfast = () => {
-    // State for selected filters
+    // State for selected filters, initialized as an empty array
     const [filters, setFilters] = useState([]);
 
+    // Handler function to update filters state with selected filters
     const handleFilterChange = (selectedFilters) => {
-        // Handler function to update filters state with selected filters
         setFilters(selectedFilters);
     };
 
@@ -31,4 +33,5 @@ const Breakfast = () => {
     );
 };
 
+// Export Breakfast component as default export
 export default Breakfast;

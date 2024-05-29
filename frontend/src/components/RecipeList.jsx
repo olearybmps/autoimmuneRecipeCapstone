@@ -1,7 +1,8 @@
+// Import necessary dependencies from React
 import React, { useState, useEffect } from 'react';
 import './RecipeList.css';
 
-// API variables
+// API variables defined from .env file and base URL
 const APP_ID = import.meta.env.VITE_EDAMAM_API_ID;
 const APP_KEY = import.meta.env.VITE_EDAMAM_API_KEY;
 const BASE_URL = 'https://api.edamam.com/api/recipes/v2';
@@ -102,4 +103,5 @@ const RecipeList = ({ mealType, filters = [] }) => {
     );
 };
 
+// Export RecipeList component as default export
 export default RecipeList;
