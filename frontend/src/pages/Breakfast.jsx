@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import RecipeList from '../components/RecipeList';
 import Filter from '../components/Filter';
 
-// Define reakfast component
+// Define Breakfast component
 const Breakfast = () => {
     // State for selected filters, initialized as an empty array
     const [filters, setFilters] = useState([]);
@@ -33,5 +33,4 @@ const Breakfast = () => {
     );
 };
 
-// Export Breakfast component as default export
 export default Breakfast;

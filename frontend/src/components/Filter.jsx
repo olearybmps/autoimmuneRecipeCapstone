@@ -1,3 +1,4 @@
+// Import necessary dependencies from React
 import React, { useState } from 'react';
 import './Filter.css';
 
@@ -40,6 +41,7 @@ const filterOptions = [
     'wheat-free',
 ];
 
+// Define Filter component
 // Filter component receives onFilterChange function as prop from Breakfast.jsx component
 const Filter = ({ onFilterChange }) => {
     // Store selected filters
@@ -96,4 +98,5 @@ const Filter = ({ onFilterChange }) => {
     );
 };
 
+// Export Filter component as default export
 export default Filter;

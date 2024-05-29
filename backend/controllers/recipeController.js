@@ -4,6 +4,7 @@ const Recipe = require('../models/recipeModel');
 const getAllRecipes = async (req, res) => {
   try {
     const recipes = await Recipe.find();
+    // Log data to node.js
     console.log('Recipes:', recipes);
     res.json(recipes);
   } catch (error) {

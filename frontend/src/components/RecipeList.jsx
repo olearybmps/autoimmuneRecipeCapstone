@@ -103,5 +103,4 @@ const RecipeList = ({ mealType, filters = [] }) => {
     );
 };
 
-// Export RecipeList component as default export
 export default RecipeList;
