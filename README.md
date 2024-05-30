@@ -1,11 +1,10 @@
 # Capstone Project
 
 Project Website: Recipes to Health & Wellness 
-![image](https://github.com/olearybmps/autoimmuneRecipeCapstone/assets/160647100/d515c6db-4895-4c30-88af-e8dad1e681c5)
+![image](https://github.com/olearybmps/autoimmuneRecipeCapstone/assets/160647100/d5d81287-385f-43b5-916c-6d96cb394353)
 ## This application allows users to:
 - Utilize the Edamam.com API 
 - Browse and View Recipes by Meal Type
-- Filter Recipes by Diet or Allergy
 - Upload and share user recipes
 
 ##Technologies Used
