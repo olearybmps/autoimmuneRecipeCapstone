@@ -1,7 +1,7 @@
 // Import necessary dependencies from React and local components
 import React, { useState } from 'react';
 import RecipeList from '../components/RecipeList';
-import Filter from '../components/Filter';
+// import Filter from '../components/Filter';
 
 // Define Breakfast component
 const Breakfast = () => {
@@ -21,7 +21,7 @@ const Breakfast = () => {
                 - Pass handleFilterChange function as onFilterChange prop
                 - Allows Filter component to notify Breakfast component when selected filters change
             */}
-            <Filter onFilterChange={handleFilterChange} />
+            {/* <Filter onFilterChange={handleFilterChange} /> */}
             {/*
                 Render RecipeList component
                 - Pass "breakfast" as mealType prop to specify the type of recipes to fetch

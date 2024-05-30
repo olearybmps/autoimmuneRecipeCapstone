@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RecipeList from '../components/RecipeList';
-import Filter from '../components/Filter';
+// import Filter from '../components/Filter';
 
 const Dinner = () => {
     // State for selected filters
@@ -19,7 +19,7 @@ const Dinner = () => {
                 - Pass handleFilterChange function as onFilterChange prop
                 - Allows Filter component to notify Dinner component when selected filters change
             */}
-            <Filter onFilterChange={handleFilterChange} />
+            {/* <Filter onFilterChange={handleFilterChange} /> */}
             {/*
                 Render RecipeList component
                 - Pass "dinner" as mealType prop to specify the type of recipes to fetch
